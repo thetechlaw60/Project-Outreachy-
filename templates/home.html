@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+     <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 300%;
+            color: rgb(144, 144, 230);
+            text-align: center;
+        }
+
+        body{
+            
+            background: linear-gradient(90deg, gray, black );
+            background-position: center;
+            background-size: cover;
+            background-image: linear-gradient(rgba(0,8,51,0.9),rgb(0,8,51,0.9)), url({{url_for('static',filename='home2.jpg')}});
+            
+            
+         }
+
+         p{
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            padding-bottom: 50pt;
+            
+         }
+
+         .box{
+            width: 50%;
+            height: 180px;
+            display: flex;
+            margin: auto;
+            border-radius: 80px;
+            border-color: rgba(47, 53, 89, 0.9) ;
+            box-shadow:  1px 3px 5px 1px rgb(68, 65, 65);
+            background: linear-gradient(90deg, rgba(24, 34, 92, 0.9), rgba(88, 91, 110, 0.9));
+            border-bottom-style: none;
+            border-right: none;
+
+         
+         }
+         .p{
+            color: rgb(211, 196, 196);
+            padding-top: 30pt;
+            margin-left: 15px;
+            margin-right: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            
+         }
+         .menu{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding-top: 50px ;
+         }
+         .menu button{
+            padding: 10px;
+            margin: 5px;
+            width: 15%;
+            border-radius:15px;
+            background-color:  rgb(20, 23, 84);
+            border-color:   rgb(107, 95, 180);
+            border-bottom-style: none;
+            border-right: none;
+            border-left: none;
+            border-top: none;
+            
+            box-shadow: 1px 1px  rgb(16, 16, 75);
+            font-size: 15px;
+            color:  white;
+         }
+         button.m{
+            background-color: rgb(173, 173, 203);
+         }
+         .example{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 60px;
+            padding: 10px 20px;
+            background-color: white ;
+            width: 40%;
+            height: 30px;
+            margin-left: 380px;
+            margin-top: 40px;
+            backdrop-filter: blur(4px) saturate(180%);
+            
+            
+         }
+         input{
+            background: transparent;
+            flex: 1;
+            border: 0;
+            outline: none;
+            padding: 24px 20px;
+            font-size: 20px;
+            color: rgb(22, 19, 19);
+            
+            
+         }
+
+         .example button {
+            border: 0;
+            border-radius: 50%;
+            width: 60px;
+            height: 30px;
+            
+            cursor: pointer;
+
+         }
+         .example button img{
+            border-radius: 50%;
+            
+         }
+         .example button:hover{
+            
+         }
+
+         .k{
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            color:  rgb(211, 196, 196);
+         }
+         
+         
+
+
+
+
+         
+
+</style>
+
+    <h1>WELCOME!</h1>
+    
+    <p>This page is dedicated to finding missing links and sources.
+        your contribution would be of great assistance!
+        The snippet below is not backed up by a 
+        <b style="font-family:Arial, Helvetica, sans-serif ;font-style: inherit;">reliable source</b>, 
+        if you can <b style="font-family:Arial, Helvetica, sans-serif ;font-style: inherit;"
+        >fix this</b>. click <b style="color:rgb(85, 85, 177);">Game on!</b>
+        or <b style="color: rgb(140, 45, 140);">Pass</b> to see another. Thank you.
+    </p>
+
+    <div >
+        <button class="box">
+            <p class="p"><b> "The ILO's enforcement mechanisms are weak, incorporating
+                labour standards in the World Trade Organisation's (WTO) operation has been 
+                proposed. WTO oversees, primarily, the General..."</b>
+            </p>
+        </button>
+    </div>
+    
+    <div class="menu">
+        <button><b>Game on!</b></button>
+        <button class="m"><b>Pass!</b></button>
+    </div>
+    
+    <form action="https://www.google.com/search" method="get" class="example">
+        <input type="text" placeholder="Search for a topic..." name="search">
+        <button type="submit"><img src="{{ url_for('static', filename='download 1.png')}}" alt="" width="20" height="10"></button>
+     </form>
+
+    <p class="k">8 contributions today!</p>  
+
+    
+
+{% endblock %}    
+
+    

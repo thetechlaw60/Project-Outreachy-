@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<style>
+  body{
+    background: linear-gradient(90deg, rgb(212, 159, 159), rgb(165, 36, 165));
+  }
+  .record{
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgb(46, 41, 41);
+
+  }
+  .record img{
+    border-radius: 50%;
+  }
+  .total{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .z{
+    margin: 12px;
+    padding: 10px;
+    
+    width: 30%;
+    text-align: center;
+    background-color: azure;
+    box-shadow: 0 4px 8px 0;
+    
+  }
+  .z img{
+    border-radius: 70%;
+    
+  }
+  .y{
+    margin: 12px;
+    padding: 10px;
+    
+    width: 30%;
+    text-align: center;
+    background-color: rgb(194, 201, 201);
+    box-shadow: 0 4px 8px 0;
+  }
+  .y img{
+    border-radius: 50%;
+  }
+  .compare{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .g{
+    margin: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0;
+    width: 30%;
+    text-align: center;
+    
+    
+  }
+  .f{
+    margin: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0;
+    width: 30%;
+    text-align: center;
+    
+    
+  }
+  .p{
+    margin: 12px;
+    padding: 10px;
+    
+    width: 30%;
+    text-align: center;
+    background-color: rgb(194, 201, 201);
+    box-shadow: 0 4px 8px 0;
+  }
+  .compare button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0;;
+    
+  }
+.compare button img{
+  border-radius: 80%;
+}
+.p img{
+  border-radius: 50%;
+}
+  
+
+</style>
+
+<div class="record">
+  <img src="{{ url_for('static', filename='dashbord.png')}}" alt="" width="150" height="150">
+  <h1>DASHBOARD RECORDS</h1>
+</div>
+
+<div class="total">
+   <div class="z">
+    <img src="{{ url_for('static', filename='total.jpg')}}" alt="" width="80" height="80">
+    <h1>1300</h1>
+    <h3>Total number of tools in records</h3>
+   </div>
+
+   <div class="y">
+    <img src="{{ url_for('static', filename='number.jpg')}}" alt="" width="80" height="80">
+    <h1>900</h1>
+    <h3>Number of tools with missing information </h3>
+   </div>
+</div>
+
+<div class="compare">
+  <button>
+    <div class="g">
+      <img src="{{ url_for('static', filename='percent.png')}}" alt="" width="80" height="80">
+      <h1>60%</h1>
+      <h4>% of tools with missing information </h4>
+    </div>
+    <div class="f">
+      <img src="{{ url_for('static', filename='total.jpg')}}" alt="" width="80" height="80">
+      <h1>1300</h1>
+      <h4> Total No of tools </h4>
+    </div>
+  </button>  
+  
+  <div class="p">
+    <img src="{{ url_for('static', filename='edit1.png')}}" alt="" width="80" height="80">
+    <h1>500</h1>
+    <h3> No of Tools edited</h3>
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}  

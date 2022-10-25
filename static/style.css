@@ -1,0 +1,49 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    
+    
+  }
+  
+  li {
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    
+    
+    
+  }
+  .b  {
+    float: right;
+  }
+
+  .a {
+    float: right;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 11px;
+    text-decoration: none;
+  }
+  
+  
+  li a:hover {
+    background-color: rgb(223, 208, 208);
+    border: 10px;
+    border-radius: 12px;
+  
+    
+  }
+
+ li{
+  transition: all 0.3s ease 0s;
+ }
+
+ @media screen and (max-width: 600px){
+  
+ }
