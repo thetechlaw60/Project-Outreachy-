@@ -1,18 +1,9 @@
-runtime: python27
-
-api_version: 1
-
-threadsafe: true
-
-
-handlers:
-  - url: /static
-   static_dir: static
-  - url: /.*
-    sripts: main.app
-
-
-libraries:
-  - name: ssl
-
-  version: latest
+- name: node
+  entrypoint: npm
+  args: ["install"]
+- name: node
+  entrypoint: npm
+  args: ["run", "build"] 
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["apps", "deploy"]
+timeout: "1600s"   
