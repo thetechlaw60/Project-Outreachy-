@@ -10,8 +10,4 @@ as it has nothing to do with Backend Aspect. This is a simple project with simpl
 * Create with any FRONTEND FRAMEWORK AND TESTING LIBRARY.
 * UNIT Testing.
 
-
-
-
-
-
+A link to my Website https://mystaticui.herokuapp.com/dash
