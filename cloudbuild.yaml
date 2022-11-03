@@ -1,9 +1,0 @@
-- name: node
-  entrypoint: npm
-  args: ["install"]
-- name: node
-  entrypoint: npm
-  args: ["run", "build"] 
-- name: ["gcr.io/cloud-builders/gcloud"]
-  args: ["apps", "deploy" '-']
-timeout: "1600s"   
